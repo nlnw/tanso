@@ -1,16 +1,16 @@
-import { useEffect } from 'react';
-
-// import Accordion from './components/Accordion';
-// import Tabs from './components/Tabs';
-
+import { useState, useEffect } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './index.css';
 
 function App() {
   useEffect(() => {
     import('preline');
   }, []);
+  const [count, setCount] = useState(0)
 
   return (
+    <>
     <div class="max-w-[50rem] flex flex-col mx-auto w-full h-full">
       <header class="mb-auto flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm py-4">
         <nav class="w-full px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8" aria-label="Global">
@@ -63,7 +63,8 @@ function App() {
         </div>
       </footer>
     </div>
-  );
+    </>
+  )
 }
 
-export default App;
+export default App

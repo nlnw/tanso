@@ -12,7 +12,7 @@ const router = createHashRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/tanso/",
+    path: "/tanso/:subpage?/:subitem?",
     element: <Tanso />,
   },
 ]);

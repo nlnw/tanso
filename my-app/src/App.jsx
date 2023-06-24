@@ -1,65 +1,261 @@
-import { useEffect } from 'react'
-import './index.css';
+import { useEffect } from "react";
+import "./index.css";
 
 function App() {
   useEffect(() => {
-    import('preline');
+    import("preline");
   }, []);
 
   return (
-    <div className="max-w-[50rem] flex flex-col mx-auto w-full h-full">
-      <header className="mb-auto flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm py-4">
-        <nav className="w-full px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8" aria-label="Global">
-          <div className="flex items-center justify-between">
-            <a className="flex-none text-xl font-semibold text-white" href="#" aria-label="Brand">Brand</a>
-            <div className="sm:hidden">
-              <button type="button" className="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border border-gray-700 hover:border-gray-600 font-medium text-gray-300 hover:text-white shadow-sm align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-blue-600 transition-all text-sm" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
-                <svg className="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+    <div className="relative overflow-hidden">
+      <div
+        aria-hidden="true"
+        className="flex absolute -top-96 left-1/2 transform -translate-x-1/2"
+      >
+        <div className="bg-gradient-to-r from-violet-300/50 to-purple-100 blur-3xl w-[25rem] h-[44rem] rotate-[-60deg] transform -translate-x-[10rem] dark:from-violet-900/50 dark:to-purple-900"></div>
+        <div className="bg-gradient-to-tl from-blue-50 via-blue-100 to-blue-50 blur-3xl w-[90rem] h-[50rem] rounded-fulls origin-top-left -rotate-12 -translate-x-[15rem] dark:from-indigo-900/70 dark:via-indigo-900/70 dark:to-blue-900/70"></div>
+      </div>
+
+      <div className="relative z-10">
+        <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
+          <div className="max-w-2xl text-center mx-auto">
+            <p className="inline-block text-sm font-medium bg-clip-text bg-gradient-to-l from-blue-600 to-violet-500 text-transparent dark:from-blue-400 dark:to-violet-400">
+              🌳
+            </p>
+
+            <div className="mt-5 max-w-2xl">
+              <h1 className="block font-semibold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-gray-200">
+                Tanso 炭素
+              </h1>
+            </div>
+
+            <div className="mt-5 max-w-3xl">
+              <p className="text-lg text-gray-600 dark:text-gray-400">
+                Tanso is a carbon credits registry and marketplace built on top
+                of EAS.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-3 w-full sm:inline-flex sm:justify-center">
+              <a
+                className="inline-flex justify-center items-center gap-x-3 text-center bg-green-600 hover:bg-green-700 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
+                href="javascript:;"
+              >
+                Get started 🌳
+                <svg
+                  className="w-3 h-3"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
                 </svg>
-                <svg className="hs-collapse-open:block hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                </svg>
-              </button>
+              </a>
             </div>
           </div>
-          <div id="navbar-collapse-with-animation" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
-            <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
-              <a className="font-medium text-white" href="#" aria-current="page">Landing</a>
-              <a className="font-medium text-gray-400 hover:text-gray-500" href="#">Account</a>
-              <a className="font-medium text-gray-400 hover:text-gray-500" href="#">Work</a>
-              <a className="font-medium text-gray-400 hover:text-gray-500" href="#">Blog</a>
+        </div>
+      </div>
+
+      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div className="relative p-6 md:p-16">
+          <div className="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
+            <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
+              <h2 className="text-2xl text-gray-800 font-bold sm:text-3xl dark:text-gray-200">
+                Fully customizable rules to match your unique needs
+              </h2>
+
+              <nav
+                className="grid gap-4 mt-5 md:mt-10"
+                aria-label="Tabs"
+                role="tablist"
+              >
+                <button
+                  type="button"
+                  className="hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-left hover:bg-gray-200 p-4 md:p-5 rounded-xl dark:hs-tab-active:bg-slate-900 dark:hover:bg-gray-700 active"
+                  id="tabs-with-card-item-1"
+                  data-hs-tab="#tabs-with-card-1"
+                  aria-controls="tabs-with-card-1"
+                  role="tab"
+                >
+                  <span className="flex">
+                    <svg
+                      className="flex-shrink-0 mt-2 h-6 w-6 md:w-7 md:h-7 hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z" />
+                      <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    </svg>
+                    <span className="grow ml-6">
+                      <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">
+                        Advanced tools
+                      </span>
+                      <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">
+                        Use Tanso thoroughly thought and automated libraries to
+                        manage your businesses.
+                      </span>
+                    </span>
+                  </span>
+                </button>
+
+                <button
+                  type="button"
+                  className="hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-left hover:bg-gray-200 p-4 md:p-5 rounded-xl dark:hs-tab-active:bg-slate-900 dark:hover:bg-gray-700"
+                  id="tabs-with-card-item-2"
+                  data-hs-tab="#tabs-with-card-2"
+                  aria-controls="tabs-with-card-2"
+                  role="tab"
+                >
+                  <span className="flex">
+                    <svg
+                      className="flex-shrink-0 mt-2 h-6 w-6 md:w-7 md:h-7 hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z"
+                      />
+                    </svg>
+                    <span className="grow ml-6">
+                      <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">
+                        Smart dashboards
+                      </span>
+                      <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">
+                        Tanso sample components, copy-paste codes, and start
+                        right off.
+                      </span>
+                    </span>
+                  </span>
+                </button>
+
+                <button
+                  type="button"
+                  className="hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-left hover:bg-gray-200 p-4 md:p-5 rounded-xl dark:hs-tab-active:bg-slate-900 dark:hover:bg-gray-700"
+                  id="tabs-with-card-item-3"
+                  data-hs-tab="#tabs-with-card-3"
+                  aria-controls="tabs-with-card-3"
+                  role="tab"
+                >
+                  <span className="flex">
+                    <svg
+                      className="flex-shrink-0 mt-2 h-6 w-6 md:w-7 md:h-7 hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5zM6.374 1 4.168 8.5H7.5a.5.5 0 0 1 .478.647L6.78 13.04 11.478 7H8a.5.5 0 0 1-.474-.658L9.306 1H6.374z" />
+                    </svg>
+                    <span className="grow ml-6">
+                      <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">
+                        Powerful features
+                      </span>
+                      <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">
+                        Reduce time and effort on building modern look design
+                        with Tanso.
+                      </span>
+                    </span>
+                  </span>
+                </button>
+              </nav>
+            </div>
+
+            <div className="lg:col-span-6">
+              <div className="relative">
+                <div>
+                  <div
+                    id="tabs-with-card-1"
+                    role="tabpanel"
+                    aria-labelledby="tabs-with-card-item-1"
+                  >
+                    <img
+                      className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
+                      src="https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
+                      alt="Image Description"
+                    />
+                  </div>
+
+                  <div
+                    id="tabs-with-card-2"
+                    className="hidden"
+                    role="tabpanel"
+                    aria-labelledby="tabs-with-card-item-2"
+                  >
+                    <img
+                      className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
+                      src="https://images.unsplash.com/photo-1665686306574-1ace09918530?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
+                      alt="Image Description"
+                    />
+                  </div>
+
+                  <div
+                    id="tabs-with-card-3"
+                    className="hidden"
+                    role="tabpanel"
+                    aria-labelledby="tabs-with-card-item-3"
+                  >
+                    <img
+                      className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]"
+                      src="https://images.unsplash.com/photo-1598929213452-52d72f63e307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
+                      alt="Image Description"
+                    />
+                  </div>
+                </div>
+
+                <div className="hidden absolute top-0 right-0 translate-x-20 md:block lg:translate-x-20">
+                  <svg
+                    className="w-16 h-auto text-orange-500"
+                    width="121"
+                    height="135"
+                    viewBox="0 0 121 135"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 16.4754C11.7688 27.4499 21.2452 57.3224 5 89.0164"
+                      stroke="currentColor"
+                      stroke-width="10"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M33.6761 112.104C44.6984 98.1239 74.2618 57.6776 83.4821 5"
+                      stroke="currentColor"
+                      stroke-width="10"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M50.5525 130C68.2064 127.495 110.731 117.541 116 78.0874"
+                      stroke="currentColor"
+                      stroke-width="10"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
-        </nav>
-      </header>
-      <main id="content" role="main">
-        <div className="text-center py-10 px-4 sm:px-6 lg:px-8">
-          <h1 className="block text-2xl font-bold text-white sm:text-4xl">Tanso</h1>
-          <p className="mt-3 text-lg text-gray-300">Cover is a one-page template for building simple and beautiful home pages using Tailwind CSS.</p>
-          <div className="mt-5 flex flex-col justify-center items-center gap-2 sm:flex-row sm:gap-3">
-            <a className="w-full sm:w-auto inline-flex justify-center items-center gap-x-3.5 text-center bg-white shadow-sm text-sm font-medium rounded-md hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-slate-900 transition py-3 px-4" href="https://github.com/htmlstreamofficial/preline/tree/main/examples/html" target="_blank">
-              <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-              </svg>
-              Get the source code
-            </a>
-            <a className="w-full sm:w-auto inline-flex justify-center items-center gap-x-3.5 text-center border border-2 border-gray-600 shadow-sm text-sm font-medium rounded-md text-gray-300 hover:text-white hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-800 transition py-3 px-4" href="../examples.html">
-              <svg className="w-2.5 h-2.5" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M11.2792 1.64001L5.63273 7.28646C5.43747 7.48172 5.43747 7.79831 5.63273 7.99357L11.2792 13.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              Back to examples
-            </a>
+
+          <div className="absolute inset-0 grid grid-cols-12 w-full h-full">
+            <div className="col-span-full lg:col-span-7 lg:col-start-6 bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full dark:bg-white/[.075]"></div>
           </div>
         </div>
-      </main>
-      <footer className="mt-auto text-center py-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm text-gray-400">Cover template for <a className="text-white decoration-2 underline underline-offset-2 font-medium hover:text-gray-200 hover:decoration-gray-400" href="../index.html">Preline</a></p>
-        </div>
-      </footer>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

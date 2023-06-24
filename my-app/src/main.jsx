@@ -5,17 +5,20 @@ import Tanso from "./routes/Tanso.jsx";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/tanso/",
-    element: <Tanso />,
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/tanso/",
+      element: <Tanso />,
+    },
+  ],
+  { basename: "/tanso" }
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

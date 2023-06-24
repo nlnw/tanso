@@ -18,11 +18,8 @@ export default function CarbonTable() {
                 <div className="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-gray-700">
                   <div>
                     <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-                      Invoices
+                      Projects
                     </h2>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Create invoices, edit, download and more.
-                    </p>
                   </div>
 
                   <div>
@@ -55,63 +52,6 @@ export default function CarbonTable() {
                         </svg>
                         Create
                       </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="border-b border-gray-200 hover:bg-gray-50 dark:hover:bg-slate-900 dark:border-gray-700">
-                  <button
-                    type="button"
-                    className="hs-collapse-toggle py-4 px-6 w-full flex items-center gap-2 font-semibold text-gray-800 dark:text-gray-200"
-                    id="hs-basic-collapse"
-                    data-hs-collapse="#hs-as-table-collapse"
-                  >
-                    <svg
-                      className="hs-collapse-open:rotate-90 w-2.5 h-2.5"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.50598 2L10.1524 7.64645C10.3477 7.84171 10.3477 8.15829 10.1524 8.35355L4.50598 14"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                    Insights
-                  </button>
-                  <div
-                    id="hs-as-table-collapse"
-                    className="hs-collapse hidden w-full overflow-hidden transition-[height] duration-300"
-                    aria-labelledby="hs-basic-collapse"
-                  >
-                    <div className="pb-4 px-6">
-                      <div className="flex items-center space-x-2">
-                        <svg
-                          className="flex-shrink-0 h-5 w-5"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M15.1965 7.85999C15.1965 3.71785 11.8387 0.359985 7.69653 0.359985C3.5544 0.359985 0.196533 3.71785 0.196533 7.85999C0.196533 12.0021 3.5544 15.36 7.69653 15.36C11.8387 15.36 15.1965 12.0021 15.1965 7.85999Z"
-                            fill="currentColor"
-                            className="fill-blue-500"
-                          />
-                          <path
-                            d="M10.9295 4.88618C11.1083 4.67577 11.4238 4.65019 11.6343 4.82904C11.8446 5.00788 11.8702 5.32343 11.6914 5.53383L7.44139 10.5338C7.25974 10.7475 6.93787 10.77 6.72825 10.5837L4.47825 8.5837C4.27186 8.40024 4.25327 8.0842 4.43673 7.87781C4.62019 7.67142 4.93622 7.65283 5.14261 7.83629L7.01053 9.49669L10.9295 4.88618Z"
-                            fill="currentColor"
-                            className="fill-white"
-                          />
-                        </svg>
-                        <span className="text-sm text-gray-800 dark:text-gray-400">
-                          There are no insights for this period.
-                        </span>
-                      </div>
                     </div>
                   </div>
                 </div>

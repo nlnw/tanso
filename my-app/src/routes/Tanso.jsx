@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import CarbonTable from "../components/CarbonTable.jsx";
 import CarbonBalance from "../components/CarbonBalance.jsx";
 import EthGlobal from "../assets/ethglobal.svg";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export default function Tanso() {
   return (
@@ -78,6 +79,7 @@ export default function Tanso() {
                 </svg>
               </button>
 
+              <ConnectButton />
               <div className="hs-dropdown relative inline-flex [--placement:bottom-right]">
                 <button
                   id="hs-dropdown-with-header"

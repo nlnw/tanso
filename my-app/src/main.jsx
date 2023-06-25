@@ -6,6 +6,17 @@ import ErrorPage from "./routes/ErrorPage.jsx";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import { Client, Provider, cacheExchange, fetchExchange } from "urql";
 
+import "@rainbow-me/rainbowkit/styles.css";
+
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+  darkTheme,
+} from "@rainbow-me/rainbowkit";
+import { configureChains, createConfig, WagmiConfig } from "wagmi";
+import { mainnet, polygon, sepolia, gnosis } from "wagmi/chains";
+import { publicProvider } from "wagmi/providers/public";
+
 const router = createHashRouter([
   {
     path: "/",
@@ -23,10 +34,31 @@ const client = new Client({
   exchanges: [cacheExchange, fetchExchange],
 });
 
+const { chains, publicClient } = configureChains(
+  [mainnet, sepolia, polygon, gnosis],
+  [publicProvider()]
+);
+
+const { connectors } = getDefaultWallets({
+  appName: "Tanso",
+  projectId: "YOUR_PROJECT_ID",
+  chains,
+});
+
+const wagmiConfig = createConfig({
+  autoConnect: true,
+  connectors,
+  publicClient,
+});
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider value={client}>
-      <RouterProvider router={router} />
+      <WagmiConfig config={wagmiConfig}>
+        <RainbowKitProvider chains={chains} theme={darkTheme()}>
+          <RouterProvider router={router} />
+        </RainbowKitProvider>
+      </WagmiConfig>
     </Provider>
   </React.StrictMode>
 );

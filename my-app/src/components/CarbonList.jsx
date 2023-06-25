@@ -1,5 +1,5 @@
 import { useQuery } from "urql";
-import { schemaRegistry, schemaUIDs } from "../utils/eas.js";
+import { eas, schemaRegistry, schemaUIDs } from "../utils/eas.js";
 import { useEffect, useState } from "react";
 import { SchemaEncoder } from "@ethereum-attestation-service/eas-sdk";
 
@@ -42,22 +42,25 @@ export default function CarbonList() {
   if (error) return <pre>{error.message}</pre>;
 
   const schemaEncoder = new SchemaEncoder(schema);
+  console.log(schema);
   const schemaColumns = schemaEncoder.decodeData(data.attestations[0].data);
   console.log(schemaColumns);
 
   const attestIt = async () => {
-    const eas = new EAS(EASContractAddress);
     eas.connect(signer);
 
     // Initialize SchemaEncoder with the schema string
-    const schemaEncoder = new SchemaEncoder("uint256 eventId, uint8 voteIndex");
+    const schemaEncoder = new SchemaEncoder(
+      "string project_type,uint32 estimate_cc_amount,uint32 latitude,uint32 longitude,string country,string state,string region"
+    );
     const encodedData = schemaEncoder.encodeData([
-      { name: "eventId", value: 1, type: "uint256" },
-      { name: "voteIndex", value: 1, type: "uint8" },
+      { name: "project_type", value: "Solar", type: "string" },
+      { name: "estimate_cc_amount", value: 2222, type: "uint32" },
+      { name: "latitude", value: 422, type: "uint32" },
+      { name: "longitude", value: 645, type: "uint32" },
     ]);
 
-    const schemaUID =
-      "0xb16fa048b0d597f5a821747eba64efa4762ee5143e9a80600d0005386edfc995";
+    const schemaUID = schemaUIDs.CCVA_attests_project_approval;
 
     const tx = await eas.attest({
       schema: schemaUID,
@@ -168,14 +171,11 @@ export default function CarbonList() {
           key="new"
         >
           <td className="h-px w-px whitespace-nowrap">
-            <a
-              className="block"
-              data-hs-overlay="#hs-ai-invoice-modal"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a className="block" data-hs-overlay="#hs-ai-invoice-modal">
               <div className="px-6 py-2">
-                <span className="font-mono text-sm text-blue-600 dark:text-blue-500"></span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  ---
+                </span>
               </div>
             </a>
           </td>

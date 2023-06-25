@@ -32,8 +32,8 @@ function App() {
 
             <div className="mt-5 max-w-3xl">
               <p className="text-lg text-gray-600 dark:text-gray-400">
-                Tanso is a carbon credits registry and marketplace built on top
-                of EAS.
+                Tanso is a carbon credits registry and marketplace with support
+                for Ethereum Attestation Service.
               </p>
             </div>
 

@@ -51,7 +51,7 @@ export default function CarbonBalance() {
               </div>
               <div className="mt-1 flex items-center gap-x-2">
                 <h3 className="text-xl sm:text-2xl font-medium text-gray-800 dark:text-gray-200">
-                  130.659 ETH
+                  9.241 ETH
                 </h3>
               </div>
             </div>

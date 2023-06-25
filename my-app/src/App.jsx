@@ -67,7 +67,8 @@ function App() {
           <div className="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
               <h2 className="text-2xl text-gray-800 font-bold sm:text-3xl dark:text-gray-200">
-                Fully customizable rules to match your unique needs
+                Seamless solution for organizations and entities to register,
+                trade and track carbon credits with utmost transparency.
               </h2>
 
               <nav
@@ -97,11 +98,11 @@ function App() {
                     </svg>
                     <span className="grow ml-6">
                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">
-                        Advanced tools
+                        Dynamic Ecosystem
                       </span>
                       <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">
-                        Use Tanso thoroughly thought and automated libraries to
-                        manage your businesses.
+                        Where buyers can effortlessly purchase carbon credits
+                        from sellers.
                       </span>
                     </span>
                   </span>
@@ -131,11 +132,10 @@ function App() {
                     </svg>
                     <span className="grow ml-6">
                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">
-                        Smart dashboards
+                        Open Access
                       </span>
                       <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">
-                        Tanso sample components, copy-paste codes, and start
-                        right off.
+                        Access to a secure and efficient marketplace
                       </span>
                     </span>
                   </span>
@@ -162,11 +162,11 @@ function App() {
                     </svg>
                     <span className="grow ml-6">
                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">
-                        Powerful features
+                        Chain Verification
                       </span>
                       <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">
-                        Reduce time and effort on building modern look design
-                        with Tanso.
+                        Uses Ethereum Attestation Service for secure
+                        verification of credits.
                       </span>
                     </span>
                   </span>

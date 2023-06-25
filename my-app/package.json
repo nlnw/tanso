@@ -12,6 +12,7 @@
   "dependencies": {
     "@ethereum-attestation-service/eas-sdk": "^0.29.0",
     "@rainbow-me/rainbowkit": "^1.0.3",
+    "@xmtp/react-sdk": "^1.0.0-preview.2",
     "graphql": "^16.7.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

@@ -5,6 +5,7 @@ import Tanso from "./routes/Tanso.jsx";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import { Client, Provider, cacheExchange, fetchExchange } from "urql";
+import { XMTPProvider } from "@xmtp/react-sdk";
 
 import "@rainbow-me/rainbowkit/styles.css";
 
@@ -56,7 +57,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider value={client}>
       <WagmiConfig config={wagmiConfig}>
         <RainbowKitProvider chains={chains} theme={darkTheme()}>
-          <RouterProvider router={router} />
+          <XMTPProvider>
+            <RouterProvider router={router} />
+          </XMTPProvider>
         </RainbowKitProvider>
       </WagmiConfig>
     </Provider>
